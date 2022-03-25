@@ -1,0 +1,106 @@
+.intro {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 80px;
+}
+
+.intro-img img {
+  border-radius: 6px;
+  height: auto;
+}
+
+.intro-info h1 {
+  font-size: 6rem;
+  line-height: 1.2;
+  color: #141414;
+  position: relative;
+}
+.intro-info h1:before {
+  content: "";
+  width: 80px;
+  height: 80px;
+  background: url(./img/deco.svg) no-repeat center;
+  position: absolute;
+  top: -10px;
+  left: -30px;
+  z-index: -1;
+}
+
+.intro p {
+  font-size: 2rem;
+  color: #8f8f8f;
+  padding-top: 20px;
+  position: relative;
+}
+.intro p::after {
+  content: "";
+  width: 35px;
+  height: 2px;
+  background: linear-gradient(
+    90.37deg,
+    #00923f 1.99%,
+    #da251d 52.3%,
+    #fff500 100%
+  );
+  position: absolute;
+  bottom: 0;
+  left: 280px;
+}
+@media (max-width: 1100px) {
+  .intro {
+    gap: 40px;
+  }
+  .intro-info h1 {
+    font-size: 4rem;
+  }
+  .intro p {
+    font-size: 1.5rem;
+  }
+  .intro p::after {
+    content: "";
+    width: 25px;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 210px;
+  }
+
+  .intro-info h1:before {
+    width: 40px;
+    height: 10px;
+    background: linear-gradient(90deg, #458bbd 0%, #1d448f 102.5%);
+    top: 0;
+    left: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .intro {
+    gap: 20px;
+  }
+  .intro-info h1 {
+    font-size: 3rem;
+  }
+  .intro-info h1:before {
+    width: 30px;
+    height: 5px;
+  }
+}
+
+@media (max-width: 650px) {
+  .intro {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .intro {
+    grid-template-columns: 1fr;
+  }
+  .intro-img {
+    display: none;
+  }
+}
